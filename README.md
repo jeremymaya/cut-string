@@ -4,12 +4,16 @@ Author: Kyungrae Kim
 
 Deployed Endpoint:
 
+----
+
 ## Prompt
 
 Write a small web application in Python/Ruby/Node. The application only needs to do the following:
 
 * Accept a POST request to the route “/test”, which accepts one argument “string_to_cut”
 * Return a JSON object with the key “return_string” and a string containing every third letter from the original string.
+
+----
 
 ## Example
 
@@ -24,6 +28,8 @@ it will return:
 ```json
 {"return_string": "ltr"}
 ```
+
+----
 
 ## Approach
 
@@ -65,9 +71,13 @@ Complexity Analysis
 * Time Complexity: ```O(k)```. ```k``` is either the value of a parameter or the number of elements in the parameter.
 * Space Complexity: ```O(n)```. The new string will store  ```1/3 * n``` where ne is where n is the length of input string.
 
+----
+
 ## Credits
 
 * [Data Science Blog - REST API Development with Flask](https://www.datascienceblog.net/post/programming/flask-api-development/)
 * [Python - PerformanceTips](https://wiki.python.org/moin/PythonSpeed/PerformanceTips)
 * [Python - TimeComplexity](https://wiki.python.org/moin/TimeComplexity#list)
 * [Python Central - How to Slice Lists/Arrays and Tuples in Python](https://www.pythoncentral.io/how-to-slice-listsarrays-and-tuples-in-python/)
+* [pythonise.com - Working with JSON data | Learning Flask Ep. 9](https://pythonise.com/series/learning-flask/working-with-json-in-flask)
+* [pytest - Parametrizing fixtures and test functions](https://docs.pytest.org/en/latest/parametrize.html)
