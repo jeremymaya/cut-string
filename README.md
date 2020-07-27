@@ -41,7 +41,7 @@ curl -X POST https://cut-string.herokuapp.com/test --data '{"string_to_cut": "he
 
 ### Approach using Enumerate
 
-First approach is to use enumaerate to access index of the input string and build a new string.
+The first approach is to use enumerate to access the index of the input string and build a new string.
 
 ```Python
 string = "hellothere"
@@ -50,18 +50,17 @@ s = ""
 for i, letter in enumerate(string, start=1):
     if i % 3 == 0:
         s += letter
-
 return s
 ```
 
 Complexity Analysis
 
-* Time Complexity: ```O(n)```. We need to iterate every characater from the string where n is the length of input string.
-* Space Complexity: ```O(n)```. The new string will store  ```1/3 * n``` where ne is where n is the length of input string.
+* Time Complexity: ```O(n)```. We need to iterate every character from the string where ```n``` is the length of the input string.
+* Space Complexity: ```O(n)```. The new string will store  ```1/3 * n``` where ```n``` is the length of input string.
 
-### Appraoch using Join
+### Approach using Join
 
-Since strings in Python are immutable, a new string needs to be created to solve the problem. This continual copying from the initial apporach can lead to significant inefficiencies in Python programs.
+Since strings in Python are immutable, a new string needs to be created to solve the problem. This continual copying from the initial approach can lead to significant inefficiencies in Python programs.
 
 We can optimize the above approach using ```s = "".join(list)```
 
@@ -70,12 +69,13 @@ string = "hellothere"
 
 slist = input[2::3]
 s = "".join(slist)
+return s
 ```
 
 Complexity Analysis
 
 * Time Complexity: ```O(k)```. Where ```k``` is either the value of a parameter or the number of elements in the parameter.
-* Space Complexity: ```O(n)```. The new string will store  ```1/3 * n``` where ne is where n is the length of input string.
+* Space Complexity: ```O(n)```. The new string will take ```1/3 * n``` space where ```n``` is the length of input string.
 
 ----
 
@@ -101,7 +101,7 @@ Start the application in development mode with the following command:
 FLASK_ENV=development flask run
 ```
 
-Test the functionality of the endpoint runing at ```localhost:5000``` with the following command:
+Test the functionality of the endpoint running at ```localhost:5000``` with the following command:
 
 ```bash
 curl -X POST http://127.0.0.1:5000/test --data '{"string_to_cut": "hellothere"}' -H 'Content-Type: application/json'
