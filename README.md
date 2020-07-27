@@ -27,4 +27,47 @@ it will return:
 
 ## Approach
 
+### Approach using Enumerate
+
+First approach is to use enumaerate to access index of the input string and build a new string.
+
+```Python
+string = "hellothere"
+s = ""
+
+for i, letter in enumerate(string, start=1):
+    if i % 3 == 0:
+        s += letter
+
+return s
+```
+
+Complexity Analysis
+
+* Time Complexity: ```O(n)```. We need to iterate every characater from the string where n is the length of input string.
+* Space Complexity: ```O(n)```. The new string will store  ```1/3 * n``` where ne is where n is the length of input string.
+
+### Appraoch using Join
+
+Since strings in Python are immutable, a new string needs to be created to solve the problem. This continual copying from the initial apporach can lead to significant inefficiencies in Python programs.
+
+We can optimize the above approach using more idomatic methods from Python using ```s = "".join(list)```
+
+```Python
+string = "hellothere"
+
+slist = input[2::3]
+s = "".join(slist)
+```
+
+Complexity Analysis
+
+* Time Complexity: ```O(k)```. ```k``` is either the value of a parameter or the number of elements in the parameter.
+* Space Complexity: ```O(n)```. The new string will store  ```1/3 * n``` where ne is where n is the length of input string.
+
 ## Credits
+
+* [Data Science Blog - REST API Development with Flask](https://www.datascienceblog.net/post/programming/flask-api-development/)
+* [Python - PerformanceTips](https://wiki.python.org/moin/PythonSpeed/PerformanceTips)
+* [Python - TimeComplexity](https://wiki.python.org/moin/TimeComplexity#list)
+* [Python Central - How to Slice Lists/Arrays and Tuples in Python](https://www.pythoncentral.io/how-to-slice-listsarrays-and-tuples-in-python/)
