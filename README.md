@@ -81,3 +81,4 @@ Complexity Analysis
 * [Python Central - How to Slice Lists/Arrays and Tuples in Python](https://www.pythoncentral.io/how-to-slice-listsarrays-and-tuples-in-python/)
 * [pythonise.com - Working with JSON data | Learning Flask Ep. 9](https://pythonise.com/series/learning-flask/working-with-json-in-flask)
 * [pytest - Parametrizing fixtures and test functions](https://docs.pytest.org/en/latest/parametrize.html)
+* [uWSGI - Running python webapps on Heroku with uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/tutorials/heroku_python.html)
