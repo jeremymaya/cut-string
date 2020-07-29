@@ -137,12 +137,14 @@ Run the application in production with the following command:
 uwsgi --ini app.ini --need-app
 ```
 
-The application is currently deployed on Heroku with the following endpoint: <https://cut-string.herokuapp.com/test>
+The application is currently deployed on Heroku with the following endpoint:
+
+<https://cut-string.herokuapp.com/test>
 
 Run the automated test on the deployed Heroku with the following command:
 
 ```bash
-pytest --host https://cut-string.herokuapp.com/test
+pytest --host https://cut-string.herokuapp.com
 ```
 
 ----
