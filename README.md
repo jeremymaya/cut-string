@@ -142,7 +142,7 @@ The application is currently deployed on Heroku with the following endpoint: <ht
 Run the automated test on the deployed Heroku with the following command:
 
 ```bash
-pytest --host https://cut-string.herokuapp.com/test
+pytest --host https://cut-string.herokuapp.com
 ```
 
 ----
