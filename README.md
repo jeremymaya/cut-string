@@ -1,5 +1,7 @@
 # cut-string
 
+![Actions Status](https://github.com/jeremymaya/cut-string/workflows/build/badge.svg)
+
 Author: Kyungrae Kim
 
 Endpoint: <https://cut-string.herokuapp.com/api/docs>
