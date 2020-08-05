@@ -2,7 +2,7 @@
 
 Author: Kyungrae Kim
 
-Endpoint: <https://cut-string.herokuapp.com/test>
+Endpoint: <https://cut-string.herokuapp.com/api/docs>
 
 ----
 
@@ -90,7 +90,7 @@ git clone https://github.com/jeremymaya/cut-string.git
 Install the dependencies:
 
 ```bash
-python3 -m pip install requirements.txt
+python3 -m pip3 install requirements.txt
 ```
 
 ### Development Mode
@@ -107,6 +107,10 @@ Test the functionality of the endpoint running at ```localhost:5000``` with the 
 curl -X POST http://127.0.0.1:5000/test --data '{"string_to_cut": "hellothere"}' -H 'Content-Type: application/json'
 ```
 
+Alternatively, test the functionality of the endpoint running at <http://127.0.0.1:5000/api/docs/> by clicking ```Try it out``` button.
+
+![Open API](assets/open_api.png)
+
 The expected output of the above command is:
 
 ```JSON
@@ -115,7 +119,7 @@ The expected output of the above command is:
 }
 ```
 
-Run the automated test with the following command:
+Run the automated test with the following command while the server is running:
 
 ```bash
 pytest
@@ -124,9 +128,9 @@ pytest
 The expected output of the above command is:
 
 ```bash
-test/test_endpoints.py .............                                     [100%]
+test/test_endpoints.py ..............                                    [100%]
 
-============================== 13 passed in 0.56s ==============================
+============================== 14 passed in 0.84s ==============================
 ```
 
 ### Production

@@ -1,6 +1,7 @@
 import os
 import pytest
 import requests
+from openapi_spec_validator import validate_spec_url
 
 @pytest.mark.parametrize(
     "payload,expected",
@@ -40,3 +41,7 @@ def test_cut_string_exception(host, payload):
     json = response.json()
     assert 'message' in json
     assert json['message'] == 'Request body must be a JSON object with the key “string_to_cut” and a string'
+
+def test_swagger_specification(host):
+    endpoint = os.path.join(host, 'api', 'swagger.json')
+    validate_spec_url(endpoint)
