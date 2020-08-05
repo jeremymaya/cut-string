@@ -92,7 +92,7 @@ git clone https://github.com/jeremymaya/cut-string.git
 Install the dependencies:
 
 ```bash
-python3 -m pip3 install requirements.txt
+python3 -m pip install requirements.txt
 ```
 
 ### Development Mode
