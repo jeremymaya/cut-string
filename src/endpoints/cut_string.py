@@ -26,7 +26,7 @@ def test():
           description: call fail
           content:
             application/json:
-              schema: OutputSchema
+              schema: ErrorSchema
       tags:
           - cut string
     """
