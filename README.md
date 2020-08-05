@@ -19,13 +19,13 @@ Write a small web application in Python/Ruby/Node. The application only needs to
 
 If you POST
 
-```JSON
+```json
 {"string_to_cut": "hellothere"}
 ```
 
 it will return:
 
-```JSON
+```json
 {"return_string": "ltr"}
 ```
 
@@ -43,7 +43,7 @@ curl -X POST https://cut-string.herokuapp.com/test --data '{"string_to_cut": "he
 
 The first approach is to use enumerate to access the index of the input string and build a new string.
 
-```Python
+```python
 string = "hellothere"
 s = ""
 
@@ -64,7 +64,7 @@ Since strings in Python are immutable, a new string needs to be created to solve
 
 We can optimize the above approach using ```s = "".join(list)```
 
-```Python
+```python
 string = "hellothere"
 
 slist = input[2::3]
@@ -107,17 +107,17 @@ Test the functionality of the endpoint running at ```localhost:5000``` with the 
 curl -X POST http://127.0.0.1:5000/test --data '{"string_to_cut": "hellothere"}' -H 'Content-Type: application/json'
 ```
 
-Alternatively, test the functionality of the endpoint running at <http://127.0.0.1:5000/api/docs/> by clicking ```Try it out``` button.
-
-![Open API](assets/open_api.png)
-
 The expected output of the above command is:
 
-```JSON
+```json
 {
     "return_string": "ltr"
 }
 ```
+
+Alternatively, test the functionality of the endpoint running at <http://127.0.0.1:5000/api/docs/> by clicking the ```Try it out``` button.
+
+![Open API](assets/open_api.png)
 
 Run the automated test with the following command while the server is running:
 
