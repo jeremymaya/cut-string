@@ -119,6 +119,8 @@ The expected output of the above command is:
 
 Alternatively, test the functionality of the endpoint running at <http://127.0.0.1:5000/api/docs/> by clicking the ```Try it out``` button.
 
+![Swagger Validator Badge](https://validator.swagger.io/validator?url=https://cut-string.herokuapp.com/api/swagger.json)
+
 ![Open API](assets/open_api.png)
 
 Run the automated test with the following command while the server is running:
